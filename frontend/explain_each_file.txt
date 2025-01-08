@@ -1,0 +1,41 @@
+Files inside src/
+    1. assets -- static assets like images are stored Header
+    2. components -- UI Components are stored 
+    Structure of a component:
+        <template> ... </template> -- HTML
+        <script> ... </script> -- JavaScript
+        <style> ... </style> -- css
+        --- ALL 3 ARE IN THE SAME PAGE
+    
+    3. router -- has index.js -- Here the URLs are defined and mapped to the components defined in the components folder
+        routes variable defined 
+            -- Has an array of objects enclosed within "{}", 
+                -- Its already defined for "Home", "About"
+            -- Fields in each object:
+                - path  => end point in URL
+                - name => name of the route
+                - component => The component that is to be rendered. Here "component : HomeView" -- renders "HomeView.vue" from the "views" folder
+    4. views -- Has .vue files that are rendered in the final web page. 
+        COMPONENTS are integrated as part of the file in the views folder.
+        2 parts :
+            -- template
+            -- JavaScript 
+        In the HomeView.vue, the 1st part has the HTML template within which any component is called. The component to be called in imported and used in the Javascript part of the file. 
+    
+    5. App.vue -- Root component -- Starting point from which all other components are rendered. 
+        2 parts 
+            -- template
+            -- style
+        template: It has the <router-link> ... </router-link> tab that defines the end point paths to each routes
+        ==> <router-view> -- A functional component that renders the matched component for the given path. 
+                            Components rendered here can also contain its own, which will render components for given path.
+    
+    
+
+
+
+
+
+
+
+
